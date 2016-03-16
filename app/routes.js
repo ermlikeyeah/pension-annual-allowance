@@ -48,70 +48,93 @@ router.get('/examples/over-18', function (req, res) {
 
 // Example form result page, replay the data from previous page
 
-router.get('/v0_1/form-results-page', function (req, res) {
+router.get('/v0_1/page2', function (req, res) {
 
-  res.render('v0_1/form-results-page', {
-    'fullpassstring' : req.query,
-    'fullName' : req.query.fullName,
-    'niNumber' : req.query.niNumber,
-    'day' : req.query.day,
-    'month' : req.query.month,
-    'year' : req.query.year,
-    'workingTaxCredits' : req.query.workingTaxCredits
+  res.render('v0_1/page2', {
+    'withdrawal' : req.query.withdrawal
   });
 
 });
 
 
-// Example of passing No from routes.js to a page
-// Use this as a staring page to "build up" a starting scenario
+router.get('/v0_1/page3', function (req, res) {
 
-router.get('/v0_1/intro-1', function (req, res) {
-
-  var UserName = 'Janice Green';
-  var PartnerName = 'David Green';
-  var WorkingTaxCreditsValue = '325.13';
-  var ChildTaxCreditsValue = '';
-  var Children= [
-    {   ChildNumber: 1,
-        ChildName: "Hannah Green",
-        ChildAge: "3"
-    },
-
-    {   ChildNumber: 2,
-        ChildName: "Elliott Green",
-        ChildAge: "11"
-    }]
-
-
-  res.render('v0_1/overview-page', {
-
-    UserName: UserName,
-    PartnerName: PartnerName,
-    WorkingTaxCreditsValue: WorkingTaxCreditsValue,
-    ChildTaxCreditsValue: ChildTaxCreditsValue,
-    Children: Children
+  res.render('v0_1/page3', {
+    'withdrawal' : req.query.withdrawal,
+    'year1' : req.query.year1,
+    'year2' : req.query.year2,
+    'year3' : req.query.year3,
+    'year4' : req.query.year4,
+    'year5' : req.query.year5,
+    'year6' : req.query.year6,
+    'year7' : req.query.year7
 
   });
 
 });
 
-router.get('/v0_1/intro-2', function (req, res) {
 
-  var UserName = 'Janice Green';
-  var PartnerName = 'David Green';
+router.get('/v0_1/page4', function (req, res) {
+
+  res.render('v0_1/page4', {
+    'withdrawal' : req.query.withdrawal,
+    'year1' : req.query.year1,
+    'year2' : req.query.year2,
+    'year3' : req.query.year3,
+    'year4' : req.query.year4,
+    'year5' : req.query.year5,
+    'year6' : req.query.year6,
+    'year7' : req.query.year7,
+    'year8_1' : req.query.year8_1,
+    'year8_left1' : req.query.year8_left1,
+    'year8_2' : req.query.year8_2,
+    'year8_left2' : req.query.year8_left2
+
+  });
+
+});
 
 
-  var WorkingTaxCreditsValue = '400.25';
-  var ChildTaxCreditsValue = '250.66';
+
+router.get('/v0_1/page5', function (req, res) {
+
+  res.render('v0_1/page5', {
+    'withdrawal' : req.query.withdrawal,
+    'year1' : req.query.year1,
+    'year2' : req.query.year2,
+    'year3' : req.query.year3,
+    'year4' : req.query.year4,
+    'year5' : req.query.year5,
+    'year6' : req.query.year6,
+    'year7' : req.query.year7,
+    'year8_1' : req.query.year8_1,
+    'year8_left1' : req.query.year8_left1,
+    'year8_2' : req.query.year8_2,
+    'year8_left2' : req.query.year8_left2
+
+  });
+
+});
 
 
-  res.render('v0_1/overview-page', {
+router.get('/v0_1/page6', function (req, res) {
 
-    UserName: UserName,
-    PartnerName: PartnerName,
-    WorkingTaxCreditsValue: WorkingTaxCreditsValue,
-    ChildTaxCreditsValue: ChildTaxCreditsValue
+  res.render('v0_1/page6', {
+    'withdrawal' : req.query.withdrawal,
+    'year1' : req.query.year1,
+    'year2' : req.query.year2,
+    'year3' : req.query.year3,
+    'year4' : req.query.year4,
+    'year5' : req.query.year5,
+    'year6' : req.query.year6,
+    'year7' : req.query.year7,
+    'year8_1' : req.query.year8_1,
+    'year8_left1' : req.query.year8_left1,
+    'year8_2' : req.query.year8_2,
+    'year8_left2' : req.query.year8_left2,
+    'year8_1_total' : req.query.year8_1 - req.query.year8_left1,
+    'year8_2_total' : req.query.year8_2 - req.query.year8_left2,
+    'years_total' : req.query.year1 + req.query.year2 + req.query.year3 + req.query.year4 + req.query.year5 + req.query.year6 + req.query.year7 + (req.query.year8_1 - req.query.year8_left1) + (req.query.year8_2 - req.query.year8_left2)
 
   });
 
