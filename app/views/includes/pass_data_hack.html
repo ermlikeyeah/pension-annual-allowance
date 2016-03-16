@@ -1,0 +1,10 @@
+
+HIDDEN FIELDS ARE GO
+
+<input id="UserName" type="hidden" value="{{ UserName }}">
+<input id="PartnerName" type="hidden" value="{{ PartnerName }}">
+<input id="WorkingTaxCreditsValue" type="hidden" value="{{ WorkingTaxCreditsValue }}">
+<input id="ChildTaxCreditsValue" type="hidden" value="{{ ChildTaxCreditsValue }}">
+{% if Children != '' %}
+<input id="Children" type="hidden" value="[{% for child in Children %}{ChildNumber:{{ child.ChildNumber }},ChildName:{{ child.ChildName}},ChildAge:{{ child.ChildAge }}},{% endfor %}]">
+{% endif %}

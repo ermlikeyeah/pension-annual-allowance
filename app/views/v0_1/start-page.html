@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% include "includes/breadcrumb_v0_1.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <p>Some introductory content about annual allowance.</p>
+
+
+      <p>
+        <a class="button button-start" href="page1" role="button">Start now</a>
+      </p>
+
+      <h2 class="heading-medium">Before you start</h2>
+
+      <p>You must be part of a registered pension scheme to use this service.</p>
+
+      <p>We need your total pensions contributions for up to the previous eight years.</p>
+
+      <p>If there are any years you have not made a pension contribution you can let us know with a blank or zero.</p>
+
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

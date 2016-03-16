@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "includes/breadcrumb_v0_1.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+    <h1 class="heading-xlarge">
+      The outcome
+    </h1>
+
+    <p>Explantory content.</p>
+
+    <form action="page6" method="get" class="form">
+
+      <table class="check-your-answers">
+
+        <thead>
+          <tr>
+            <th class="heading-medium">
+                Time period
+            </th>
+            <th class="heading-medium">
+                Amount
+            </th>
+            <th>
+
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              2008 to 2009
+            </td>
+            <td>
+              &pound; 40,000
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              2009 to 2010
+            </td>
+            <td>
+              &pound; 10,000
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              2010 to 2011
+            </td>
+            <td>
+              &pound; 5,000
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+
+          <tr>
+            <td style="font-weight: 800;">
+              Total
+            </td>
+            <td style="font-weight: 800;">
+              &pound; 5,000
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+
+
+        </tbody>
+      </table>
+
+      <p></p>
+
+      <p>Is there some sort of outcome narrative we can provide here?</p>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+</div>
+</div>
+
+
+</main>
+{% endblock %}

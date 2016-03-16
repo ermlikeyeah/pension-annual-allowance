@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "includes/breadcrumb_v0_1.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+  <form action="page4" method="get" class="form">
+
+    <h1 class="heading-xlarge">
+      Data entry part 2 - when user chooses *yes* on page 1
+    </h1>
+
+    <p>Explanatory content.</p>
+
+
+        <table>
+          <tr>
+            <td width=50% style="border-bottom: none;">6 April 2015 until 8 July 2016</td>
+            <td style="border-bottom: none;">£ <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31" name="day"></td>
+          </tr>
+
+          <tr>
+            <td style="text-align: right;">Leftover</td>
+            <td>£ <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31" name="day"></td>
+          </tr>
+
+          <tr>
+            <td style="border-bottom: none;">9 July 2015 to 6 April 2016</td>
+            <td style="border-bottom: none;">£ <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31" name="day"></td>
+          </tr>
+
+          <tr>
+            <td style="text-align: right;">Leftover</td>
+            <td>£ <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31" name="day"></td>
+          </tr>
+
+
+        </table>
+
+        <p></p>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+</div>
+</div>
+
+
+</main>
+{% endblock %}

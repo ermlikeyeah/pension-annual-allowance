@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "includes/breadcrumb_v0_1.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+    <h1 class="heading-xlarge">
+      Data entry part 3 - this is the future, so pretend we're a year or two ahead.
+    </h1>
+
+    <p>Explantory content.</p>
+
+    <form action="page5" method="get" class="form">
+
+    <table>
+      <tbody>
+
+      <tr>
+        <td width=50% class="label">2016 to 2017</td>
+        <td>£ <input class="form-control" id="2008" type="number" pattern="[0-9]*" min="0" max="31" name="2008"></td>
+      </tr>
+
+      <tr>
+        <td width=50% class="label">2017 to 2018</td>
+        <td>£ <input class="form-control" id="2008" type="number" pattern="[0-9]*" min="0" max="31" name="2008"></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <p></p>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+</div>
+</div>
+
+
+</main>
+{% endblock %}

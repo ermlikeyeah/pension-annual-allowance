@@ -1,0 +1,122 @@
+<!--
+Text field
+-->
+
+{% macro textField(
+  fieldName,
+  forID='',
+  labelName='Default label name',
+  formHint='Default hint copy',
+  fieldValue=''
+) %}
+<div class="form-group">
+  <label class="form-label-bold" for="{{ forID }}">{{ labelName }}</label>
+  <p class="form-hint">{{ formHint }}</p>
+  <input type="text" class="form-control" id="{{ forID }}" name="{{ fieldName }}" value="{{ fieldValue | escape }}">
+</div>
+{% endmacro %}
+
+
+<!--
+Radio buttons
+-->
+
+{% macro radiobuttonsField(
+  fieldName,
+  labelText,
+  forID='',
+  items
+ ) %}
+<div class="form-group">
+  <fieldset>
+
+    {% if labelText %}
+    <label class="form-label-bold">
+      {{ labelText }}
+    </label>
+    {% endif %}
+
+    {% for item in items %}
+    <label for="radio-part-{{ item.optionforID }}" class="block-label">
+      <input id="radio-part-{{ item.optionforID }}" type="radio" name="{{ fieldName }}" value="{{ item.optionValue }}">
+      <span class="heading-small">{{ item.optionLabel }}</span>{% if item.optionDescription %}<br>{{ item.optionDescription }}
+      {% endif %}
+    </label>
+    {% endfor %}
+
+  </fieldset>
+</div>
+{% endmacro %}
+
+
+<!--
+Date of birth
+-->
+{% macro dobField(
+  day,
+  month,
+  year
+) %}
+<div class="form-group">
+  <fieldset>
+    <legend class="form-label-bold">Date of birth</legend>
+
+    <div class="form-date">
+
+      <p class="form-hint">For example, 31 3 1980</p>
+
+      <div class="form-group form-group-day">
+        <label for="dob-day">Day</label>
+        <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31" name="day"{% if day %} value="{{ day }}"{% endif %}>
+      </div>
+
+      <div class="form-group form-group-month">
+        <label for="dob-month">Month</label>
+        <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12" name="month"{% if month %} value="{{ month }}"{% endif %}>
+      </div>
+
+      <div class="form-group form-group-year">
+        <label for="dob-year">Year</label>
+        <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0" max="2014" name="year"{% if year %} value="{{ year }}"{% endif %}>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+{% endmacro %}
+
+
+
+<!--
+Green button
+-->
+
+{% macro greenbuttonField(
+  fieldName,
+  value='Continue'
+) %}
+<div class="form-group">
+  <input type="submit" class="button" value="Continue"{% if fieldName %} name="{{ fieldName}}" {% endif %}>
+</div>
+{% endmacro %}
+
+
+<!--
+Reveal
+-->
+
+{% macro revealtextField(
+  revealLabel,
+  revealText
+) %}
+<div class="form-group">
+  <details>
+    <summary><span class="summary">{{ revealLabel }}</span></summary>
+    <div class="panel panel-border-narrow">
+      <p>
+        {{ revealText }}
+      </p>
+    </div>
+  </details>
+</div>
+{% endmacro %}
