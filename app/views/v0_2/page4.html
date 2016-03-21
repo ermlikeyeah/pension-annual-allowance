@@ -1,0 +1,208 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "includes/breadcrumb_v0_2.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+    <h1 class="heading-xlarge">
+      The outcome
+    </h1>
+
+    <p>Explantory content.</p>
+
+
+
+    <form action="page6" method="get" class="form">
+
+      <table class="check-your-answers">
+
+        <thead>
+          <tr>
+            <th class="heading-medium">
+                Time period
+            </th>
+            <th class="heading-medium">
+                Amount
+            </th>
+            <th>
+
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              2008 to 2009
+            </td>
+            <td>
+              &pound; {{ year1 }}
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              2009 to 2010
+            </td>
+            <td>
+              &pound; {{ year2 }}
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              2010 to 2011
+            </td>
+            <td>
+              &pound; {{ year3 }}
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              2011 to 2012
+            </td>
+            <td>
+              &pound; {{ year4 }}
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2012 to 2013
+            </td>
+            <td>
+              &pound; {{ year5 }}
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              2013 to 2014
+            </td>
+            <td>
+              &pound; {{ year6 }}
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              2014 to 2015
+            </td>
+            <td>
+              &pound; {{ year7 }}
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              2015 to 2016 a
+            </td>
+            <td>
+              &pound; {{ year8_1_total }}
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              2015 to 2016 a
+            </td>
+            <td>
+              &pound; {{ year8_2_total }}
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>
+              2016 to 2017
+            </td>
+            <td>
+              &pound; {{ year9 }}
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>
+              2017 to 2018
+            </td>
+            <td>
+              &pound; {{ year10 }}
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+
+
+          <tr>
+            <td style="font-weight: 800;">
+              Total
+            </td>
+            <td style="font-weight: 800;">
+              &pound; {{ years_total }}
+
+            </td>
+            <td class="change-answer">
+
+            </td>
+          </tr>
+
+
+        </tbody>
+      </table>
+
+      <p></p>
+
+      <p>Is there some sort of outcome narrative we can provide here?</p>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+</div>
+</div>
+
+
+</main>
+{% endblock %}

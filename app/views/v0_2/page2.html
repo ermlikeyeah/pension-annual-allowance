@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "includes/breadcrumb_v0_2.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+    <h1 class="heading-xlarge">
+      Data entry
+    </h1>
+
+    <p>Explanatory content.</p>
+
+    <form action="page3" method="get" class="form">
+
+        <table>
+          <tbody>
+          <tr>
+            <td width=50% class="label">2008 to 2009</td>
+            <td>£ <input class="form-control" id="year1" type="number" pattern="[0-9]*" name="year1"></td>
+          </tr>
+
+          <tr>
+            <td>2009 to 2010</td>
+            <td>£ <input class="form-control" id="year2" type="number" pattern="[0-9]*" name="year2"></td>
+          </tr>
+
+          <tr>
+            <td>2010 to 2011</td>
+            <td>£ <input class="form-control" id="year3" type="number" pattern="[0-9]*" name="year3"></td>
+          </tr>
+
+          <tr>
+            <td>2011 to 2012</td>
+            <td>£ <input class="form-control" id="year4" type="number" pattern="[0-9]*" name="year4"></td>
+          </tr>
+
+          <tr>
+            <td>2012 to 2013</td>
+            <td>£ <input class="form-control" id="year5" type="number" pattern="[0-9]*" name="year5"></td>
+          </tr>
+
+          <tr>
+            <td>2013 to 2014</td>
+            <td>£ <input class="form-control" id="year6" type="number" pattern="[0-9]*" name="year6"></td>
+          </tr>
+
+          <tr>
+            <td>2014 to 2015</td>
+            <td>£ <input class="form-control" id="year7" type="number" pattern="[0-9]*" name="year7"></td>
+          </tr>
+        </tbody>
+        </table>
+
+        <p></p>
+
+        <table>
+          <tr>
+            <td width=50%{% if withdrawal == "Yes" %} style="border-bottom: none;"{% endif %}>6 April 2015 until 8 July 2016</td>
+            <td{% if withdrawal == "Yes" %} style="border-bottom: none;" {% endif %}>£ <input class="form-control" id="year8_1" type="number" pattern="[0-9]*" name="year8_1"></td>
+          </tr>
+
+          {% if withdrawal == "Yes" %}
+
+          <tr>
+            <td style="text-align: right;">Leftover</td>
+            <td>£ <input class="form-control" id="year8_left1" type="number" pattern="[0-9]*" name="year8_left1"></td>
+          </tr>
+
+          {% endif %}
+
+          <tr>
+            <td{% if withdrawal == "Yes" %} style="border-bottom: none;"{% endif %}>9 July 2015 to 6 April 2016</td>
+            <td{% if withdrawal == "Yes" %} style="border-bottom: none;"{% endif %}>£ <input class="form-control" id="year8_2" type="number" pattern="[0-9]*" name="year8_2"></td>
+          </tr>
+
+          {% if withdrawal == "Yes" %}
+
+          <tr>
+            <td style="text-align: right;">Leftover</td>
+            <td>£ <input class="form-control" id="year8_left2" type="number" pattern="[0-9]*" name="year8_left2"></td>
+          </tr>
+
+          {% endif %}
+
+
+        </table>
+
+        <p></p>
+
+        <table>
+          <tbody>
+
+          <tr>
+            <td width=50% class="label">2016 to 2017</td>
+            <td>£ <input class="form-control" id="2008" type="number" pattern="[0-9]*" name="y9"></td>
+          </tr>
+
+          <tr>
+            <td width=50% class="label">2017 to 2018</td>
+            <td>£ <input class="form-control" id="2008" type="number" pattern="[0-9]*" name="y10"></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <p></p>
+
+        <input type="hidden" name="withdrawal" value="{{ withdrawal }}">
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+</div>
+</div>
+
+
+</main>
+{% endblock %}
