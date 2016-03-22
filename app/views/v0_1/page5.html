@@ -22,18 +22,14 @@
     <form action="page6" method="get" class="form">
 
 
-    <input type="hidden" name="withdrawal" value="{{ withdrawal }}">
-    <input type="hidden" name="year1" value="{{ year1 }}">
-    <input type="hidden" name="year2" value="{{ year2 }}">
-    <input type="hidden" name="year3" value="{{ year3 }}">
-    <input type="hidden" name="year4" value="{{ year4 }}">
-    <input type="hidden" name="year5" value="{{ year5 }}">
-    <input type="hidden" name="year6" value="{{ year6 }}">
-    <input type="hidden" name="year7" value="{{ year7 }}">
-    <input type="hidden" name="year8_1" value="{{ year8_1 }}">
-    <input type="hidden" name="year8_left1" value="{{ year8_left1 }}">
-    <input type="hidden" name="year8_2" value="{{ year8_2 }}">
-    <input type="hidden" name="year8_left2" value="{{ year8_left2 }}">
+        {% include "includes/cross_page_v0_1.html"%}
+        <input type="hidden" name="year8_1" value="{{ year8_1 }}">
+        <input type="hidden" name="year8_left1" value="{{ year8_left1 }}">
+        <input type="hidden" name="year8_2" value="{{ year8_2 }}">
+        <input type="hidden" name="year8_left2" value="{{ year8_left2 }}">
+        <input type="hidden" name="year9" value="{{ year9 }}">
+        <input type="hidden" name="year10" value="{{ year10 }}">
+
 
 
       <table class="check-your-answers">
@@ -60,7 +56,7 @@
               &pound; {{ year1 }}
             </td>
             <td class="change-answer">
-              <a href="#">
+              <a href="page2?{{ passURL }}">
                 Change <span class="visuallyhidden">amount for 2008 to 2009</span>
               </a>
             </td>
@@ -74,7 +70,7 @@
               &pound; {{ year2 }}
             </td>
             <td class="change-answer">
-              <a href="#">
+              <a href="page2?{{ passURL }}">
                 Change <span class="visuallyhidden">amount for 2009 to 2010</span>
               </a>
             </td>
@@ -88,7 +84,7 @@
               &pound; {{ year3 }}
             </td>
             <td class="change-answer">
-              <a href="#">
+              <a href="page2?{{ passURL }}">
                 Change <span class="visuallyhidden">amount for 2010 to 2011</span>
               </a>
             </td>
@@ -102,7 +98,7 @@
               &pound; {{ year4 }}
             </td>
             <td class="change-answer">
-              <a href="#">
+              <a href="page2?{{ passURL }}">
                 Change <span class="visuallyhidden">amount for 2011 to 2012</span>
               </a>
             </td>
@@ -116,7 +112,7 @@
               &pound; {{ year5 }}
             </td>
             <td class="change-answer">
-              <a href="#">
+              <a href="page2?{{ passURL }}">
                 Change <span class="visuallyhidden">amount for 2012 to 2013</span>
               </a>
             </td>
@@ -130,7 +126,7 @@
               &pound; {{ year6 }}
             </td>
             <td class="change-answer">
-              <a href="#">
+              <a href="page2?{{ passURL }}">
                 Change <span class="visuallyhidden">amount for 2013 to 2014</span>
               </a>
             </td>
@@ -144,7 +140,7 @@
               &pound; {{ year7 }}
             </td>
             <td class="change-answer">
-              <a href="#">
+              <a href="page2?{{ passURL }}">
                 Change <span class="visuallyhidden">amount for 2014 to 2015</span>
               </a>
             </td>
@@ -159,7 +155,7 @@
               {% if year8_left1 != "" %}<br />&pound; {{ year8_left1 }}{% endif %}
             </td>
             <td class="change-answer">
-              <a href="#">
+              <a href="page3?{{ passURL }}">
                 Change <span class="visuallyhidden">amount for 2015 to 2016 a</span>
               </a>
             </td>
@@ -167,18 +163,50 @@
 
           <tr>
             <td>
-              2015 to 2016          {% if year8_left2 != "" %}<br /><div style="text-align:right;">Leftover</div>{% endif %}
+              2015 to 2016 b         {% if year8_left2 != "" %}<br /><div style="text-align:right;">Leftover</div>{% endif %}
             </td>
             <td>
               &pound; {{ year8_2 }}
               {% if year8_left2 != "" %}<br />&pound; {{ year8_left2 }}{% endif %}
             </td>
             <td class="change-answer">
-              <a href="#">
+              <a href="page3?{{ passURL }}">
                 Change <span class="visuallyhidden">amount for 2015 to 2016 b</span>
               </a>
             </td>
           </tr>
+
+{% if year9 != "" %}
+          <tr>
+            <td>
+              2016 to 2017
+            </td>
+            <td>
+              &pound; {{ year9 }}
+            </td>
+            <td class="change-answer">
+              <a href="page4?{{ passURL }}">
+                Change <span class="visuallyhidden">amount for 2016 to 2017</span>
+              </a>
+            </td>
+          </tr>
+{% endif %}
+
+{% if year10 != "" %}
+          <tr>
+            <td>
+              2016 to 2017
+            </td>
+            <td>
+              &pound; {{ year10 }}
+            </td>
+            <td class="change-answer">
+              <a href="page4?{{ passURL }}">
+                Change <span class="visuallyhidden">amount for 2016 to 2017</span>
+              </a>
+            </td>
+          </tr>
+{% endif %}
 
 
         </tbody>

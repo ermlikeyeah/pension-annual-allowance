@@ -21,18 +21,11 @@
 
     <form action="page5" method="get" class="form">
 
-      <input type="hidden" name="withdrawal" value="{{ withdrawal }}">
-      <input type="hidden" name="year1" value="{{ year1 }}">
-      <input type="hidden" name="year2" value="{{ year2 }}">
-      <input type="hidden" name="year3" value="{{ year3 }}">
-      <input type="hidden" name="year4" value="{{ year4 }}">
-      <input type="hidden" name="year5" value="{{ year5 }}">
-      <input type="hidden" name="year6" value="{{ year6 }}">
-      <input type="hidden" name="year7" value="{{ year7 }}">
-      <input type="hidden" name="year8_1" value="{{ year8_1 }}">
-      <input type="hidden" name="year8_left1" value="{{ year8_left1 }}">
-      <input type="hidden" name="year8_2" value="{{ year8_2 }}">
-      <input type="hidden" name="year8_left2" value="{{ year8_left2 }}">
+    {% include "includes/cross_page_v0_1.html"%}
+    <input type="hidden" name="year8_1" value="{{ year8_1 }}">
+    <input type="hidden" name="year8_left1" value="{{ year8_left1 }}">
+    <input type="hidden" name="year8_2" value="{{ year8_2 }}">
+    <input type="hidden" name="year8_left2" value="{{ year8_left2 }}">
 
 
     <table>
@@ -40,12 +33,12 @@
 
       <tr>
         <td width=50% class="label">2016 to 2017</td>
-        <td>£ <input class="form-control" id="2008" type="number" pattern="[0-9]*" min="0" max="31" name="2008"></td>
+        <td>£ <input class="form-control" id="year9" type="number" pattern="[0-9]*" name="year9" value="{{ year9 }}"></td>
       </tr>
 
       <tr>
         <td width=50% class="label">2017 to 2018</td>
-        <td>£ <input class="form-control" id="2008" type="number" pattern="[0-9]*" min="0" max="31" name="2008"></td>
+        <td>£ <input class="form-control" id="year10" type="number" pattern="[0-9]*" name="year10" value="{{ year10 }}"></td>
       </tr>
 
     </tbody>
